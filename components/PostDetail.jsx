@@ -81,6 +81,7 @@ const PostDetail = ({ post }) => {
                 className="align-middle"
                 src={post.author.photo.url}
               />
+              
               <p className="inline align-middle text-gray-600 ml-2 font-medium text-lg">
                 {post.author.name}
               </p>

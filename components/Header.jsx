@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 import Link from "next/link";
 import { getCategories } from "../services";
+// import brochacolores2 from "./public/brochacolores2.png";
+import brochacolores4 from "../public/brochacolores4.png";
 
 const Header = () => {
   const [categories, setCategories] = useState([]);
@@ -17,13 +20,22 @@ const Header = () => {
       <div className="border-b w-full inline-block border-blue-400 py-8">
         <div className="md:float-left block">
           <Link href="/">
-            <span className="hover:text-cyan-500 cursor-pointer font-bold text-4xl text-blue-900 ">
-              Tupintor
+            <span className="flex items-center justify-between hover:text-cyan-500 cursor-pointer font-bold text-3xl md:text-5xl text-blue-900 ">
+              PintoYá
+              {/* PintoresBogota */}
+              <Image
+                alt={brochacolores4}
+                src={brochacolores4}
+                // layout="fill"
+                height="70"
+                // width="40"
+                className="bg-cyan-500 left-30 items-center"
+              />
             </span>
-            <br />
+            {/* <br /> */}
             <span
               className="cursor-pointer font-mono whitespace-nowrap
-            border-right-4 w-12 animate-pulse overflow-visible text-blue-900"
+            border-right-4 w-12 animate-pulse overflow-visible text-sm md:text-lg text-blue-900"
             >
               Pintamos Casas Apartamentos...
             </span>
@@ -47,7 +59,7 @@ const Header = () => {
         text-blue-900 pt-4 hover:text-black"
       >
         Atencion Personalizada..
-        <p className="hover:text-black hover:bg-blue-200">
+        <p className="hover:text-black hover:bg-blue-100">
           Contacto: Bogota Colombia. Telefono:57 320 2937958
         </p>
       </span>

@@ -7,7 +7,7 @@ export default function Home({ posts }) {
   return (
     <main className="container mx-auto px-1 md:px-2 mb-8">
       <Head>
-        <title>TuPintor</title>
+        <title>TuPintor Pintamos tu Casa, apartamento, Local, Oficina </title>
         <meta
           name="description"
           content="Esta es una pagina web ofreciendo servicios de pintura en general."
