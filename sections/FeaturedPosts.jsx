@@ -79,6 +79,9 @@ const FeaturedPosts = () => {
     <div className="mb-8">
       <Carousel
         infinite={true}
+        autoPlay
+        showStatus={false}
+        interval={6000}
         customLeftArrow={customLeftArrow}
         customRightArrow={customRightArrow}
         responsive={responsive}

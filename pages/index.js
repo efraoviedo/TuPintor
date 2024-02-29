@@ -7,11 +7,12 @@ export default function Home({ posts }) {
   return (
     <main className="container mx-auto px-1 md:px-2 mb-8">
       <Head>
-        <title>TuPintor Pintamos tu Casa, apartamento, Local, Oficina </title>
+        <title>Pintores en bogotá. Pintamos Casas, apartamentos, Locales, Oficinas </title>
         <meta
           name="description"
           content="Esta es una pagina web ofreciendo servicios de pintura en general."
         ></meta>
+        <meta name="google-site-verification" content="8DnNkwa4PLrO9Uo0TtFU2mn6k1LGJfY7qX2ZfWtcXF4" />
       </Head>
 
       {/* <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 bg bg-yellow-500"> */}

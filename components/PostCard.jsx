@@ -8,7 +8,7 @@ import { grpahCMSImageLoader } from "../util";
 const PostCard = ({ post }) => (
   <div className="shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
     <div className="relative overflow-hidden shadow-md pb-80 mb-6">
-      {/* <h1>ESTE ES PostCCard.j</h1> */}
+      <h1>ESTE ES PostCard.j</h1>
       <img
         src={post.featuredImage.url}
         alt={post.title}
@@ -25,8 +25,8 @@ const PostCard = ({ post }) => (
           unoptimized
           loader={grpahCMSImageLoader}
           alt={post.author.name}
-          height="30"
-          width="30"
+          height="40"
+          width="40"
           className="align-middle opacity-75"
           src={post.author.photo.url}
         />
@@ -34,29 +34,29 @@ const PostCard = ({ post }) => (
           {post.author.name}
         </p>
       </div>
-      <div className="font-medium text-gray-400">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 inline mr-2 text-pink-500"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-          />
-        </svg>
-        <span className="align-middle">
-          {moment(post.createdAt).format("MMM DD, YYYY")}
-        </span>
-      </div>
     </div>
     <p className="text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8">
       {post.excerpt}
     </p>
+    <div className="font-medium text-gray-400">
+   <svg
+     xmlns="http://www.w3.org/2000/svg"
+     className="h-6 w-6 inline mr-2 text-pink-500"
+     fill="none"
+     viewBox="0 0 24 24"
+     stroke="currentColor"
+   >
+     <path
+       strokeLinecap="round"
+       strokeLinejoin="round"
+       strokeWidth="2"
+       d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+     />
+   </svg>
+   <span className="align-middle">
+     {moment(post.createdAt).format("MMM DD, YYYY")}
+   </span>
+ </div>
     <div className="text-center">
       <Link href={`/post/${post.slug}`}>
         <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-blue-900 text-sm font-medium rounded-full text-white px-6 py-3 cursor-pointer">
