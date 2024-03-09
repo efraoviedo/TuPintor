@@ -2,17 +2,24 @@ import { FeaturedPosts } from "../sections/index";
 import { PostCard, Categories, PostWidget } from "../components";
 import { getPosts } from "../services";
 import Head from "next/head";
+import Footer from "../components/Footer";
 
 export default function Home({ posts }) {
   return (
     <main className="container mx-auto px-1 md:px-2 mb-8">
       <Head>
-        <title>Pintores en bogotá. Pintamos Casas, apartamentos, Locales, Oficinas </title>
+        <title>
+          Pintores en bogotá. Pintamos Casas, apartamentos, Locales, Oficinas{" "}
+        </title>
         <meta
           name="description"
           content="Esta es una pagina web ofreciendo servicios de pintura en general."
         ></meta>
-        <meta name="google-site-verification" content="8DnNkwa4PLrO9Uo0TtFU2mn6k1LGJfY7qX2ZfWtcXF4" />
+        <meta
+          name="google-site-verification"
+          content="8DnNkwa4PLrO9Uo0TtFU2mn6k1LGJfY7qX2ZfWtcXF4"
+        />
+        <meta name="robots" content="index, follow"></meta>
       </Head>
 
       {/* <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 bg bg-yellow-500"> */}
@@ -31,18 +38,8 @@ export default function Home({ posts }) {
         </div>
       </div>
       <FeaturedPosts />
-
-      <footer className="pt-6">
-        <span
-          className="bg-gray-900  text-white w-full h-32 
-      grid items-center justify-evenly text-xs md:text-base md:flex rounded-md"
-        >
-          Atencion Personalizada. {""}
-          <p className="hover:text-cyan-500">Contacto: Bogota Colombia.</p>
-          <p className="hover:text-cyan-500">Telefono: 57 320 2937958</p>
-          <p className="hover:text-cyan-500">Email: efraoviedo@gmail.com</p>
-        </span>
-      </footer>
+      
+      <Footer /> 
     </main>
   );
 }

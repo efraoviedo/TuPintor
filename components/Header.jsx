@@ -63,7 +63,7 @@ const Header = () => {
       >
         Atencion Personalizada..
         <p className="hover:text-black hover:bg-blue-100">
-          Contacto: Bogota Colombia. Telefono:57 320 2937958
+          Contacto: Bogota Colombia. Telefono: 57 320 2937958
         </p>
       </span>
     </div>
