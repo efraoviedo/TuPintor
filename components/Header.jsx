@@ -3,8 +3,8 @@ import Image from "next/image";
 
 import Link from "next/link";
 import { getCategories } from "../services";
-// import brochacolores2 from "./public/brochacolores2.png";
 import brochacolores4 from "../public/brochacolores4.png";
+import { GrFacebookOption } from "react-icons/gr";
 
 const Header = () => {
   const [categories, setCategories] = useState([]);
@@ -21,6 +21,14 @@ const Header = () => {
       "https://wa.me/573202937958?text=Me%20gustaría%20hacer%20una%20cotización",
       "_blank"
     );
+  }
+
+  const openInNewSlash = (e) => {
+    e.preventDefault();
+    window.open(
+      "https://www.facebook.com/profile.php?id=61560455396608",
+      "_blank"
+    );
   };
 
   return (
@@ -29,8 +37,6 @@ const Header = () => {
         <div className="md:float-left block">
           <Link href="/">
             <span className="flex items-center justify-between hover:text-cyan-500 cursor-pointer font-bold text-3xl md:text-5xl text-blue-900 ">
-              {/* PintoYá */}
-              {/* pintorenbogota */}
               Pintores Bogota
               <Image
                 alt={brochacolores4}
@@ -71,14 +77,14 @@ const Header = () => {
         className="flex items-center justify-between font-thin text-xs md:text-base
         text-blue-900 pt-4 hover:text-black"
       >
-        Atencion Personalizada..
+        Atencion Inmediata..
         <p className="pl-4 hover:text-black hover:bg-blue-100">
-          Contacto: Bogota Colombia. Telefono: 57 320 2937958
+          Bogota Colombia. Telf: 57 320 2937958
         </p>
         <Link
           href="https://wa.me/573202937958?text=Me%20gustaría%20hacer%20una%20cotización"
           passHref
-          className="pl-6"
+          className="pl-6 pr-6"
         >
           <button
             className="pl-4 bg-green-700 text-white font-bold p-3 active:scale-95 active:bg-pink-100 rounded-lg cursor-pointer "
@@ -86,6 +92,16 @@ const Header = () => {
           >
             WhatsApp
           </button>
+        </Link>
+        <Link
+          href="https://www.facebook.com/profile.php?id=61560455396608"
+          passHref
+          className="rounded-lg p-1 w-11 h-11 bg-blue-700 active:scale-95 active:bg-blue-500  "
+        >
+          <GrFacebookOption
+            className="text-white font-bold w-10 h-10 pt-1 pr-1"
+            onClick={openInNewSlash}
+          />
         </Link>
       </span>
     </div>
