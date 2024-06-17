@@ -1,4 +1,5 @@
 import { request, gql } from "graphql-request";
+import { GraphQLClient } from 'graphql-request';
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
@@ -219,6 +220,33 @@ export const submitComment = async (obj) => {
   });
 
   return result.json();
+};
+
+export const submitContact = async (contactData) => {
+  const graphQLClient = new GraphQLClient(graphqlAPI, {
+    headers: {
+      authorization: `Bearer ${process.env.GRAPHCMS_TOKEN}`,
+    },
+  });
+
+  const query = gql`
+    mutation CreateContact($name: String!, $email: String!, $phone: String!, $message: String!) {
+      createContact(
+        data: {
+          name: $name
+          email: $email
+          phone: $phone
+          message: $message
+        }
+      ) {
+        id
+      }
+    }
+  `;
+
+  const result = await graphQLClient.request(query, contactData);
+
+  return result;
 };
 
 export const getComments = async (slug) => {

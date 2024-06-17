@@ -36,10 +36,10 @@ const FeaturedPosts = () => {
   }, []);
 
   const customLeftArrow = (
-    <div className="absolute arrow-btn left-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
+    <div className="absolute arrow-btn left-0 text-center py-3 cursor-pointer bg-blue-700 rounded-full">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-16 w-16 text-white"
+        className="h-6 w-6 text-white"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -56,7 +56,7 @@ const FeaturedPosts = () => {
   );
 
   const customRightArrow = (
-    <div className="absolute arrow-btn right-0 text-center py-3 cursor-pointer bg-black rounded-full">
+    <div className="absolute arrow-btn right-0 text-center py-3 cursor-pointer bg-blue-700 rounded-full">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-6 text-white w-full"
@@ -80,12 +80,12 @@ const FeaturedPosts = () => {
       <Carousel
         infinite={true}
         autoPlay
-        showStatus={false}
-        interval={6000}
+        // showStatus={false}
+        // interval={6000}
         customLeftArrow={customLeftArrow}
         customRightArrow={customRightArrow}
         responsive={responsive}
-        itemClass="px-2"
+        itemClass="px-4"
       >
         {dataLoaded &&
           featuredPosts.map((post, index) => (

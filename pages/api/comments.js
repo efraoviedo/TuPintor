@@ -14,6 +14,7 @@ export default async function asynchandler(req, res) {
     mutation CreateComment(
       $name: String!
       $email: String!
+      $phone: String!
       $comment: String!
       $slug: String!
     ) {
@@ -21,6 +22,7 @@ export default async function asynchandler(req, res) {
         data: {
           name: $name
           email: $email
+          phone: $phone
           comment: $comment
           post: { connect: { slug: $slug } }
         }
@@ -33,6 +35,7 @@ export default async function asynchandler(req, res) {
   const result = await graphQLClient.request(query, {
     name: req.body.name,
     email: req.body.email,
+    phone: req.body.phone,
     comment: req.body.comment,
     slug: req.body.slug,
   });

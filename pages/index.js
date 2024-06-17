@@ -3,6 +3,7 @@ import { PostCard, Categories, PostWidget } from "../components";
 import { getPosts } from "../services";
 import Head from "next/head";
 import Footer from "../components/Footer";
+import ContactForm from "../components/ContactForm";
 
 export default function Home({ posts }) {
   return (
@@ -37,8 +38,8 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div>
+      <ContactForm />
       <FeaturedPosts />
-      
       <Footer /> 
     </main>
   );
